@@ -1,0 +1,41 @@
+
+<h4>Let the Wine Genie recommend you a type of wine to drink!</h4>
+
+{% if variety %}
+Your wine is:
+<strong>{{ variety }}</strong>
+
+<div style="margin-top: 30px;">
+<a href="/wine">Pick another</a>
+<br/>
+<a href='http://www.amazon.com/s/field-keywords={{ variety }}'>Buy some</a>
+</div>
+
+<div style="margin-top: 30px;">
+<img src='http://1.bp.blogspot.com/-KDqfkBWR9jk/UFJOySqgZrI/AAAAAAAAABw/AX89vJh_wE8/s1600/bridget-wine.jpg'>
+</div>
+
+{% else %}
+
+<p>
+How do you like your wine?
+</p>
+
+<form action='/wine' method='post'>
+<select name='type'>
+ <option value='red'>A hearty red wine</option>
+ <option value='white'>A classic white wine</option>
+ <option value='fizzy'>Sparkling for me</option>
+ <option value='pink'>White and red? Why not both!</option>
+ <option value='non'>Hold the alcohol</option>
+</select>
+
+<input type="submit" value="Hit me">
+
+</form>
+
+<p></p>
+
+<img src='http://cdn.someecards.com/someecards/usercards/1337966891582_8334424.png'>
+{% endif %}
+
