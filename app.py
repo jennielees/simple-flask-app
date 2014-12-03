@@ -104,5 +104,5 @@ def presents():
     return jsonify(to_santa)
 
 # Finally, now we have defined what the app can do, we will run it!
-app.run(port=8888)
+app.run()
 # Open up http://localhost:5000 in your web browser.
